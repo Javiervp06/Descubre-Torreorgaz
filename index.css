@@ -1,0 +1,266 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+    text-align: center; /* Centramos todo en la portada */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 2. Cabecera (Azul oscuro) */
+header {
+    background-color: #1a2b49;
+    padding: 20px 0;
+}
+
+.barra {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #d4af37; /* Dorado */
+    font-size: 24px;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #87CEEB; /* Azul celeste al pasar el ratón */
+}
+
+/* 3. Contenido Principal */
+main {
+    padding: 40px 20px;
+    flex: 1;
+}
+
+.intro h2 {
+    color: #1a2b49;
+    font-size: 32px;
+}
+
+/* 4. Tarjetas de Categorías */
+.categorias {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Para que bajen si no caben */
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.tarjeta {
+    width: 250px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.tarjeta h3 {
+    color: #1a2b49;
+    font-size: 18px;
+    margin: 10px 0;
+}
+.tarjeta:hover{
+    transform: scale(1.02);
+    border-color: #87CEEB;
+}
+/* 5. Barra de Búsqueda */
+.busqueda {
+    margin-top: 50px;
+    background-color: #f4f4f4;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.busqueda input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* 6. Pie de página */
+footer {
+    background-color: #1a2b49;
+    color: white;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* --- MEJORAS VISUALES Y RESPONSIVE --- */
+
+/* 1. Imágenes Responsive y Miniaturas (Requisito) */
+img {
+    max-width: 100%; /* Nunca se saldrá de la pantalla */
+    height: auto;
+    display: block;
+}
+
+/* Efecto de miniatura y recorte inteligente para las tarjetas */
+.tarjeta img, .categoria img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Recorta sin deformar, actuando como miniatura */
+    border-radius: 8px 8px 0 0; /* Bordes redondeados solo arriba */
+    transition: transform 0.4s ease;
+}
+
+/* 2. Cabecera Fija e interactiva */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Sombra para dar profundidad */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+    /* Esto crea un resplandor blanco alrededor de todo el logo */
+    filter: drop-shadow(0px 0px 12px rgba(255, 255, 255, 0.9)); 
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+}
+
+/* 3. Menú Responsive */
+nav {
+    display: flex;
+    flex-wrap: wrap; /* Si la pantalla es pequeña, los enlaces bajan de línea */
+    gap: 10px;
+    justify-content: center;
+}
+
+nav a {
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover, nav a.activo {
+    background-color: #d4af37;
+    color: #1a2b49; /* Invertimos el color al pasar el ratón */
+}
+
+/* 4. Estilos de la Audioguía */
+.audioguia {
+    background-color: #f4f4f4;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 40px auto;
+    max-width: 600px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+    border: 2px dashed #d4af37;
+}
+
+.audioguia h3 {
+    color: #1a2b49;
+    margin-top: 0;
+}
+
+.reproductor-audio {
+    width: 100%; /* Tamaño oportuno adaptado al contenedor */
+    margin-top: 15px;
+    outline: none;
+}
+
+/* 5. Footer y Creative Commons */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.licencia {
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.licencia a {
+    color: #87CEEB;
+    text-decoration: none;
+}
+
+.licencia a:hover {
+    text-decoration: underline;
+}
+
+/* --- ESTILOS DEL VÍDEO Y ACCESIBILIDAD --- */
+.video-promo {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 40px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 4px solid #1a2b49; /* Línea azul oscuro arriba para decorar */
+}
+
+.contenedor-video {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.reproductor-video {
+    width: 100%; /* Adaptable a cualquier pantalla */
+    max-height: 450px; /* Tamaño oportuno para no saturar la pantalla */
+    border-radius: 10px;
+    background-color: #000; /* Fondo negro elegante antes de darle al play */
+}
+
+/* Quitar el estilo de enlace a las tarjetas */
+.tarjeta-link {
+    text-decoration: none !important; /* Fuerza a quitar el subrayado */
+    color: #333 !important;           /* Fuerza el color del texto a gris oscuro */
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Aseguramos que los títulos dentro de la tarjeta mantengan su color azul oscuro */
+.tarjeta h3 {
+    color: #1a2b49; 
+    margin: 15px 0 10px 0;
+    text-decoration: none !important;
+}
+
+/* El texto de descripción también sin subrayado */
+.tarjeta p {
+    text-decoration: none !important;
+    padding: 0 10px 15px 10px;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px) scale(1.02); 
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    border-color: #d4af37; /* Cambia a dorado al pasar el ratón */
+}

@@ -1,0 +1,198 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* HEADER */
+header { background-color: #1a2b49; padding: 20px 0; }
+.barra { width: 90%; max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+.logo { color: #d4af37; font-size: 24px; font-weight: bold; }
+nav a { color: white; text-decoration: none; margin-left: 15px;
+    font-size: 14px; }
+nav a:hover { color: #87CEEB; }
+
+/* CONTENEDOR CENTRAL */
+main {
+    width: 90%;
+    max-width: 700px;
+    margin: 50px auto;
+    background: white;
+    padding: 40px;
+    border-top: 5px solid #d4af37; /* Decoración dorada arriba */
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    flex: 1;
+}
+
+h2 {
+    color: #1a2b49;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* ESTILOS DEL FORMULARIO */
+label {
+    display: block;
+    color: #1a2b49;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #ddd;
+    border-radius: 8px; /* Bordes algo más cuadrados que contacto */
+    background-color: #fafafa;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical; /* Permite estirar hacia abajo */
+}
+
+button {
+    background-color: #d4af37; /* Botón dorado para diferenciar */
+    color: #1a2b49;
+    font-weight: bold;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin-left: auto; /* Alinea el botón a la derecha */
+}
+
+button:hover {
+    background-color: #1a2b49;
+    color: white;
+}
+
+footer {
+    background-color: #1a2b49;
+    color: white;
+    padding: 15px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+/* --- MEJORAS VISUALES Y RESPONSIVE --- */
+
+/* 1. Imágenes Responsive y Miniaturas (Requisito) */
+img {
+    max-width: 100%; /* Nunca se saldrá de la pantalla */
+    height: auto;
+    display: block;
+}
+
+/* Efecto de miniatura y recorte inteligente para las tarjetas */
+.tarjeta img, .categoria img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Recorta sin deformar, actuando como miniatura */
+    border-radius: 8px 8px 0 0; /* Bordes redondeados solo arriba */
+    transition: transform 0.4s ease;
+}
+
+/* 2. Cabecera Fija e interactiva */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Sombra para dar profundidad */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+    /* Esto crea un resplandor blanco alrededor de todo el logo */
+    filter: drop-shadow(0px 0px 12px rgba(255, 255, 255, 0.9)); 
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+}
+
+/* 3. Menú Responsive */
+nav {
+    display: flex;
+    flex-wrap: wrap; /* Si la pantalla es pequeña, los enlaces bajan de línea */
+    gap: 10px;
+    justify-content: center;
+}
+
+nav a {
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover, nav a.activo {
+    background-color: #d4af37;
+    color: #1a2b49; /* Invertimos el color al pasar el ratón */
+}
+
+/* 4. Estilos de la Audioguía */
+.audioguia {
+    background-color: #f4f4f4;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 40px auto;
+    max-width: 600px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+    border: 2px dashed #d4af37;
+}
+
+.audioguia h3 {
+    color: #1a2b49;
+    margin-top: 0;
+}
+
+.reproductor-audio {
+    width: 100%; /* Tamaño oportuno adaptado al contenedor */
+    margin-top: 15px;
+    outline: none;
+}
+
+/* 5. Footer y Creative Commons */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.licencia {
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.licencia a {
+    color: #87CEEB;
+    text-decoration: none;
+}
+
+.licencia a:hover {
+    text-decoration: underline;
+}

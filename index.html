@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Descubre Torreorgaz</title>
+    <!-- Vinculamos su propia hoja de estilos -->
+    <link rel="stylesheet" href="index.css">
+    <!-- Fuente Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="Logo-torreorgaz1.png">
+<body>
+
+    <!-- CABECERA -->
+    <header>
+        <div class="barra">
+            <div class="logo-container">
+                <img src="Logo-torreorgaz1.png" alt="Logotipo de Torreorgaz Turismo" class="logo-img">
+            </div>
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="patrimonio.html">Patrimonio</a>
+                <a href="naturaleza.html">Naturaleza</a>
+                <a href="eventos.html">Eventos</a>
+                <a href="gastronomia.html">Gastronomía</a>
+                <a href="sugerencias.html">Sugerencias</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        
+        <!-- Sección de Bienvenida -->
+        <section class="intro">
+            <h2>Bienvenido a Torreorgaz</h2>
+            <p>Descubre su castillo, sus calles con encanto y su entorno natural único.</p>
+        </section>
+
+        <section class="audioguia">
+            <h3>🎧 Audioguía Oficial</h3>
+            <p>Escucha una breve introducción a la historia de nuestro pueblo.</p>
+            <audio controls class="reproductor-audio">
+                <source src="bienvenida.mp3" type="audio/mpeg">
+                Tu navegador no soporta la reproducción de audio.
+            </audio>
+        </section>
+        <!-- Sección de Categorías (Las 4 tarjetas de la captura) -->
+        <section class="categorias">
+            
+            <div class="tarjeta">
+                <a href="patrimonio.html" class="tarjeta-link">
+                    <img src="Imagenes/Humilladero.jpg" alt="Patrimonio">
+                    <h3>Patrimonio</h3>
+                    <p>Iglesias, el castillo y edificios históricos.</p>
+                </a>
+            </div>
+
+            <div class="tarjeta">
+                <a href="naturaleza.html" class="tarjeta-link">
+                    <img src="Imagenes/Calvario.jpg" alt="Naturaleza">
+                    <h3>Naturaleza</h3>
+                    <p>Rutas, miradores y espacios verdes.</p>
+                </a>
+            </div>
+
+            <div class="tarjeta">
+                <a href="eventos.html" class="tarjeta-link">
+                    <img src="Imagenes/pasion.jpg" alt="Eventos">
+                    <h3>Eventos culturales</h3>
+                    <p>Museos, eventos y más.</p>
+                </a>
+            </div>
+
+            <div class="tarjeta">
+                <a href="gastronomia.html" class="tarjeta-link">
+                    <img src="Imagenes/llares.jpg" alt="Gastronomía">
+                    <h3>Gastronomía</h3>
+                    <p>Fiestas locales y productos típicos.</p>
+                </a>
+            </div>
+
+        </section>
+
+        <!-- Barra de búsqueda (Captura pág 5) -->
+        <section class="busqueda">
+            <h3>Busca aquí lo que desees encontrar sobre Torreorgaz</h3>
+            <input type="text" placeholder="Buscar...">
+        </section>
+
+        <section class="video-promo">
+            <h3>🎬 Conoce Torreorgaz en vídeo</h3>
+            <p>Un pequeño recorrido visual por nuestros rincones favoritos.</p>
+            
+            <div class="contenedor-video">
+                <video controls class="reproductor-video">
+                    <source src="Video_torreorgaz.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>&copy; 2025 Portal Turístico de Torreorgaz</p>
+        <div class="licencia">
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+                <img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+            </a>
+            <p class="cc-texto">Este sitio web está bajo una <br><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional</a>.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

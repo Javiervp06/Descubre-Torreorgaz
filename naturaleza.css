@@ -1,0 +1,202 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+    text-align: center; /* Centramos todo en la portada */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ENCABEZADO */
+header {
+    background-color: #1a2b49;
+    padding: 20px 0;
+}
+
+.barra {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #d4af37;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #87CEEB;
+}
+
+/* CONTENIDO PRINCIPAL */
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    flex: 1;
+}
+
+h2 {
+    color: #1a2b49;
+    border-bottom: 2px solid #d4af37;
+    padding-bottom: 10px;
+}
+
+/* Ajustes para el Carrusel */
+.carrusel-contenedor {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.carrusel-img {
+    height: 500px; /* Tamaño ideal para que se vea bien en PC */
+    object-fit: cover; /* Evita que la imagen se estire */
+}
+
+/* En móviles bajamos un poco la altura para que no ocupe toda la pantalla */
+@media (max-width: 768px) {
+    .carrusel-img {
+        height: 300px;
+    }
+}
+
+/* Estilo para los títulos sobre la imagen */
+.carousel-caption h3 {
+    color: #d4af37 !important; /* Dorado del logo */
+    font-weight: bold;
+}
+
+.carousel-caption p {
+    color: white !important;
+    font-size: 0.9rem;
+}
+
+footer {
+    background-color: #1a2b49;
+    color: white;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+/* --- MEJORAS VISUALES Y RESPONSIVE --- */
+
+/* 1. Imágenes Responsive y Miniaturas (Requisito) */
+img {
+    max-width: 100%; /* Nunca se saldrá de la pantalla */
+    height: auto;
+    display: block;
+}
+
+/* Efecto de miniatura y recorte inteligente para las tarjetas */
+.tarjeta img, .categoria img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Recorta sin deformar, actuando como miniatura */
+    border-radius: 8px 8px 0 0; /* Bordes redondeados solo arriba */
+    transition: transform 0.4s ease;
+}
+
+/* 2. Cabecera Fija e interactiva */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3); /* Sombra para dar profundidad */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+    /* Esto crea un resplandor blanco alrededor de todo el logo */
+    filter: drop-shadow(0px 0px 12px rgba(255, 255, 255, 0.9)); 
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
+}
+
+/* 3. Menú Responsive */
+nav {
+    display: flex;
+    flex-wrap: wrap; /* Si la pantalla es pequeña, los enlaces bajan de línea */
+    gap: 10px;
+    justify-content: center;
+}
+
+nav a {
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover, nav a.activo {
+    background-color: #d4af37;
+    color: #1a2b49; /* Invertimos el color al pasar el ratón */
+}
+
+/* 4. Estilos de la Audioguía */
+.audioguia {
+    background-color: #f4f4f4;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 40px auto;
+    max-width: 600px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+    border: 2px dashed #d4af37;
+}
+
+.audioguia h3 {
+    color: #1a2b49;
+    margin-top: 0;
+}
+
+.reproductor-audio {
+    width: 100%; /* Tamaño oportuno adaptado al contenedor */
+    margin-top: 15px;
+    outline: none;
+}
+
+/* 5. Footer y Creative Commons */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.licencia {
+    text-align: center;
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.licencia a {
+    color: #87CEEB;
+    text-decoration: none;
+}
+
+.licencia a:hover {
+    text-decoration: underline;
+}
